@@ -1,0 +1,575 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A0F9D7CF205862A500EE5835 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F9D7CE205862A500EE5835 /* AppDelegate.swift */; };
+		A0F9D7D1205862A500EE5835 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F9D7D0205862A500EE5835 /* ViewController.swift */; };
+		A0F9D7D4205862A500EE5835 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0F9D7D2205862A500EE5835 /* Main.storyboard */; };
+		A0F9D7D6205862A500EE5835 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0F9D7D5205862A500EE5835 /* Assets.xcassets */; };
+		A0F9D7D9205862A500EE5835 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0F9D7D7205862A500EE5835 /* LaunchScreen.storyboard */; };
+		A0F9D7E4205862A500EE5835 /* LochTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F9D7E3205862A500EE5835 /* LochTests.swift */; };
+		A0F9D7EF205862A500EE5835 /* LochUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F9D7EE205862A500EE5835 /* LochUITests.swift */; };
+		A0F9D7FE205863FE00EE5835 /* TimerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F9D7FD205863FE00EE5835 /* TimerState.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A0F9D7E0205862A500EE5835 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0F9D7C3205862A500EE5835 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0F9D7CA205862A500EE5835;
+			remoteInfo = Loch;
+		};
+		A0F9D7EB205862A500EE5835 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0F9D7C3205862A500EE5835 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0F9D7CA205862A500EE5835;
+			remoteInfo = Loch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A0F9D7CB205862A500EE5835 /* Loch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0F9D7CE205862A500EE5835 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A0F9D7D0205862A500EE5835 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A0F9D7D3205862A500EE5835 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A0F9D7D5205862A500EE5835 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A0F9D7D8205862A500EE5835 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A0F9D7DA205862A500EE5835 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0F9D7DF205862A500EE5835 /* LochTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LochTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0F9D7E3205862A500EE5835 /* LochTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LochTests.swift; sourceTree = "<group>"; };
+		A0F9D7E5205862A500EE5835 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0F9D7EA205862A500EE5835 /* LochUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LochUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0F9D7EE205862A500EE5835 /* LochUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LochUITests.swift; sourceTree = "<group>"; };
+		A0F9D7F0205862A500EE5835 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0F9D7FD205863FE00EE5835 /* TimerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerState.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A0F9D7C8205862A500EE5835 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0F9D7DC205862A500EE5835 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0F9D7E7205862A500EE5835 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A0F9D7C2205862A500EE5835 = {
+			isa = PBXGroup;
+			children = (
+				A0F9D7CD205862A500EE5835 /* Loch */,
+				A0F9D7E2205862A500EE5835 /* LochTests */,
+				A0F9D7ED205862A500EE5835 /* LochUITests */,
+				A0F9D7CC205862A500EE5835 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A0F9D7CC205862A500EE5835 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A0F9D7CB205862A500EE5835 /* Loch.app */,
+				A0F9D7DF205862A500EE5835 /* LochTests.xctest */,
+				A0F9D7EA205862A500EE5835 /* LochUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A0F9D7CD205862A500EE5835 /* Loch */ = {
+			isa = PBXGroup;
+			children = (
+				A0F9D7FC2058635E00EE5835 /* Enums */,
+				A0F9D7CE205862A500EE5835 /* AppDelegate.swift */,
+				A0F9D7D0205862A500EE5835 /* ViewController.swift */,
+				A0F9D7D2205862A500EE5835 /* Main.storyboard */,
+				A0F9D7D5205862A500EE5835 /* Assets.xcassets */,
+				A0F9D7D7205862A500EE5835 /* LaunchScreen.storyboard */,
+				A0F9D7DA205862A500EE5835 /* Info.plist */,
+			);
+			path = Loch;
+			sourceTree = "<group>";
+		};
+		A0F9D7E2205862A500EE5835 /* LochTests */ = {
+			isa = PBXGroup;
+			children = (
+				A0F9D7E3205862A500EE5835 /* LochTests.swift */,
+				A0F9D7E5205862A500EE5835 /* Info.plist */,
+			);
+			path = LochTests;
+			sourceTree = "<group>";
+		};
+		A0F9D7ED205862A500EE5835 /* LochUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A0F9D7EE205862A500EE5835 /* LochUITests.swift */,
+				A0F9D7F0205862A500EE5835 /* Info.plist */,
+			);
+			path = LochUITests;
+			sourceTree = "<group>";
+		};
+		A0F9D7FC2058635E00EE5835 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				A0F9D7FD205863FE00EE5835 /* TimerState.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A0F9D7CA205862A500EE5835 /* Loch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0F9D7F3205862A500EE5835 /* Build configuration list for PBXNativeTarget "Loch" */;
+			buildPhases = (
+				A0F9D7C7205862A500EE5835 /* Sources */,
+				A0F9D7C8205862A500EE5835 /* Frameworks */,
+				A0F9D7C9205862A500EE5835 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Loch;
+			productName = Loch;
+			productReference = A0F9D7CB205862A500EE5835 /* Loch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A0F9D7DE205862A500EE5835 /* LochTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0F9D7F6205862A500EE5835 /* Build configuration list for PBXNativeTarget "LochTests" */;
+			buildPhases = (
+				A0F9D7DB205862A500EE5835 /* Sources */,
+				A0F9D7DC205862A500EE5835 /* Frameworks */,
+				A0F9D7DD205862A500EE5835 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A0F9D7E1205862A500EE5835 /* PBXTargetDependency */,
+			);
+			name = LochTests;
+			productName = LochTests;
+			productReference = A0F9D7DF205862A500EE5835 /* LochTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A0F9D7E9205862A500EE5835 /* LochUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0F9D7F9205862A500EE5835 /* Build configuration list for PBXNativeTarget "LochUITests" */;
+			buildPhases = (
+				A0F9D7E6205862A500EE5835 /* Sources */,
+				A0F9D7E7205862A500EE5835 /* Frameworks */,
+				A0F9D7E8205862A500EE5835 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A0F9D7EC205862A500EE5835 /* PBXTargetDependency */,
+			);
+			name = LochUITests;
+			productName = LochUITests;
+			productReference = A0F9D7EA205862A500EE5835 /* LochUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A0F9D7C3205862A500EE5835 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "the Odin Spire";
+				TargetAttributes = {
+					A0F9D7CA205862A500EE5835 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					A0F9D7DE205862A500EE5835 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A0F9D7CA205862A500EE5835;
+					};
+					A0F9D7E9205862A500EE5835 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A0F9D7CA205862A500EE5835;
+					};
+				};
+			};
+			buildConfigurationList = A0F9D7C6205862A500EE5835 /* Build configuration list for PBXProject "Loch" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A0F9D7C2205862A500EE5835;
+			productRefGroup = A0F9D7CC205862A500EE5835 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A0F9D7CA205862A500EE5835 /* Loch */,
+				A0F9D7DE205862A500EE5835 /* LochTests */,
+				A0F9D7E9205862A500EE5835 /* LochUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A0F9D7C9205862A500EE5835 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0F9D7D9205862A500EE5835 /* LaunchScreen.storyboard in Resources */,
+				A0F9D7D6205862A500EE5835 /* Assets.xcassets in Resources */,
+				A0F9D7D4205862A500EE5835 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0F9D7DD205862A500EE5835 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0F9D7E8205862A500EE5835 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A0F9D7C7205862A500EE5835 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0F9D7D1205862A500EE5835 /* ViewController.swift in Sources */,
+				A0F9D7FE205863FE00EE5835 /* TimerState.swift in Sources */,
+				A0F9D7CF205862A500EE5835 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0F9D7DB205862A500EE5835 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0F9D7E4205862A500EE5835 /* LochTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0F9D7E6205862A500EE5835 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0F9D7EF205862A500EE5835 /* LochUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A0F9D7E1205862A500EE5835 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A0F9D7CA205862A500EE5835 /* Loch */;
+			targetProxy = A0F9D7E0205862A500EE5835 /* PBXContainerItemProxy */;
+		};
+		A0F9D7EC205862A500EE5835 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A0F9D7CA205862A500EE5835 /* Loch */;
+			targetProxy = A0F9D7EB205862A500EE5835 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A0F9D7D2205862A500EE5835 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A0F9D7D3205862A500EE5835 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A0F9D7D7205862A500EE5835 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A0F9D7D8205862A500EE5835 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A0F9D7F1205862A500EE5835 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A0F9D7F2205862A500EE5835 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A0F9D7F4205862A500EE5835 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MP2C6DY4C6;
+				INFOPLIST_FILE = Loch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.theodinspire.Loch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A0F9D7F5205862A500EE5835 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MP2C6DY4C6;
+				INFOPLIST_FILE = Loch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.theodinspire.Loch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A0F9D7F7205862A500EE5835 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MP2C6DY4C6;
+				INFOPLIST_FILE = LochTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.theodinspire.LochTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Loch.app/Loch";
+			};
+			name = Debug;
+		};
+		A0F9D7F8205862A500EE5835 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MP2C6DY4C6;
+				INFOPLIST_FILE = LochTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.theodinspire.LochTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Loch.app/Loch";
+			};
+			name = Release;
+		};
+		A0F9D7FA205862A500EE5835 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MP2C6DY4C6;
+				INFOPLIST_FILE = LochUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.theodinspire.LochUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Loch;
+			};
+			name = Debug;
+		};
+		A0F9D7FB205862A500EE5835 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MP2C6DY4C6;
+				INFOPLIST_FILE = LochUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.theodinspire.LochUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Loch;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A0F9D7C6205862A500EE5835 /* Build configuration list for PBXProject "Loch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0F9D7F1205862A500EE5835 /* Debug */,
+				A0F9D7F2205862A500EE5835 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0F9D7F3205862A500EE5835 /* Build configuration list for PBXNativeTarget "Loch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0F9D7F4205862A500EE5835 /* Debug */,
+				A0F9D7F5205862A500EE5835 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0F9D7F6205862A500EE5835 /* Build configuration list for PBXNativeTarget "LochTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0F9D7F7205862A500EE5835 /* Debug */,
+				A0F9D7F8205862A500EE5835 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0F9D7F9205862A500EE5835 /* Build configuration list for PBXNativeTarget "LochUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0F9D7FA205862A500EE5835 /* Debug */,
+				A0F9D7FB205862A500EE5835 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A0F9D7C3205862A500EE5835 /* Project object */;
+}
