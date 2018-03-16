@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TimerViewController: UIViewController {
     @IBOutlet weak var infoLabel: UILabel!
 
     var timerRunning = false
