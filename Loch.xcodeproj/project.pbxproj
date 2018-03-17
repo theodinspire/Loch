@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A006574C205C90F600EE8457 /* LoopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A006574B205C90F600EE8457 /* LoopViewController.swift */; };
+		A006574F205C91D300EE8457 /* LoopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A006574E205C91D300EE8457 /* LoopView.swift */; };
 		A0F9D7CF205862A500EE5835 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F9D7CE205862A500EE5835 /* AppDelegate.swift */; };
 		A0F9D7D1205862A500EE5835 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F9D7D0205862A500EE5835 /* TimerViewController.swift */; };
 		A0F9D7D4205862A500EE5835 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0F9D7D2205862A500EE5835 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		A006574B205C90F600EE8457 /* LoopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopViewController.swift; sourceTree = "<group>"; };
+		A006574E205C91D300EE8457 /* LoopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopView.swift; sourceTree = "<group>"; };
 		A0F9D7CB205862A500EE5835 /* Loch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0F9D7CE205862A500EE5835 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0F9D7D0205862A500EE5835 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,14 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		A006574D205C91BB00EE8457 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A006574E205C91D300EE8457 /* LoopView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A0F9D7C2205862A500EE5835 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +120,7 @@
 		A0F9D7CD205862A500EE5835 /* Loch */ = {
 			isa = PBXGroup;
 			children = (
+				A006574D205C91BB00EE8457 /* Views */,
 				A006574A205C90BC00EE8457 /* Controllers */,
 				A0F9D7FC2058635E00EE5835 /* Enums */,
 				A0F9D7CE205862A500EE5835 /* AppDelegate.swift */,
@@ -284,6 +295,7 @@
 				A006574C205C90F600EE8457 /* LoopViewController.swift in Sources */,
 				A0F9D7D1205862A500EE5835 /* TimerViewController.swift in Sources */,
 				A0F9D7FE205863FE00EE5835 /* TimerState.swift in Sources */,
+				A006574F205C91D300EE8457 /* LoopView.swift in Sources */,
 				A0F9D7CF205862A500EE5835 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
