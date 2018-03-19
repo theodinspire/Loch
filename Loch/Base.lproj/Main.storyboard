@@ -65,7 +65,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="arf-qx-mIE" firstAttribute="centerY" secondItem="qX9-4D-oYT" secondAttribute="centerY" id="1uc-Ea-Ltq"/>
                             <constraint firstItem="njk-vH-ded" firstAttribute="trailing" secondItem="arf-qx-mIE" secondAttribute="trailing" constant="16" id="4Do-k5-HYw"/>
@@ -76,7 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RZA-Of-6Nu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="743.47826086956525"/>
+            <point key="canvasLocation" x="38" y="802"/>
         </scene>
     </scenes>
 </document>
