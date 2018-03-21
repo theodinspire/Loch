@@ -73,6 +73,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="njk-vH-ded"/>
                     </view>
+                    <connections>
+                        <outlet property="loopView" destination="arf-qx-mIE" id="5Rg-SN-sdR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RZA-Of-6Nu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

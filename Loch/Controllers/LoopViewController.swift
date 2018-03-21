@@ -9,7 +9,8 @@
 import UIKit
 
 class LoopViewController: UIViewController {
-
+    @IBOutlet weak var loopView: LoopView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +20,12 @@ class LoopViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        loopView.animateTimer(over: 10)
     }
     
 

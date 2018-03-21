@@ -14,8 +14,13 @@ class LoopView: UIView {
     var trackShade: UIColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.6)
     var trackLight: UIColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.3)
     
+    var timerColor: UIColor = UIColor.white
+    
     var loopScale: CGFloat = 0.75
-    var lineWidth: CGFloat = 3
+    var lineWidth: CGFloat = 5
+    
+    var path: UIBezierPath?
+    var animationLayer: CAShapeLayer?
     
     override func draw(_ rect: CGRect) {
         let downRect = CGRect(origin: rect.origin + (0.0, 1.0), size: rect.size)
@@ -30,10 +35,38 @@ class LoopView: UIView {
         trackShade.setStroke()
         upPath.stroke()
         
-        let path = UIBezierPath(ovalIn: makeLoopRect(for: rect))
-        path.lineWidth = lineWidth
+        path = UIBezierPath(ovalIn: makeLoopRect(for: rect))
+        path?.lineWidth = lineWidth
         trackColor.setStroke()
-        path.stroke()
+        path?.stroke()
+    }
+    
+    func animateTimer(over duration: TimeInterval) {
+        if animationLayer == nil {
+            animationLayer = CAShapeLayer()
+            
+            let aniPath = path?.copy() as? UIBezierPath
+            
+            let transform = CGAffineTransform(rotationAngle: 1.5 * CGFloat.pi).translatedBy(x: -bounds.width, y: 0)
+            aniPath?.apply(transform)
+            
+            animationLayer?.path = aniPath?.cgPath
+            animationLayer?.strokeColor = timerColor.cgColor
+            animationLayer?.lineCap = kCALineCapRound
+            animationLayer?.fillColor = UIColor.clear.cgColor
+            animationLayer?.lineWidth = lineWidth
+            animationLayer?.shadowColor = timerColor.cgColor
+            animationLayer?.shadowRadius = 5.0
+            animationLayer?.shadowOpacity = 1
+        }
+        
+        let head = CABasicAnimation(keyPath: "strokeEnd")
+        head.fromValue = 0
+        head.toValue = 1
+        head.duration = duration
+        
+        animationLayer?.add(head, forKey: "strokeEnd")
+        layer.addSublayer(animationLayer!)
     }
     
     private func makeLoopRect(for rect: CGRect) -> CGRect {
