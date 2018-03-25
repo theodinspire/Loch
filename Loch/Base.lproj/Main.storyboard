@@ -64,12 +64,34 @@
                                     <constraint firstAttribute="width" secondItem="arf-qx-mIE" secondAttribute="height" multiplier="1:1" id="hru-jg-AjK"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJP-A4-7JW">
+                                <rect key="frame" x="167.5" y="20" width="39" height="30"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="reset:" destination="lWx-2e-oAN" eventType="touchUpInside" id="BgP-oU-VWe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qC-xb-9t9">
+                                <rect key="frame" x="170" y="58" width="34" height="30"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="start:" destination="lWx-2e-oAN" eventType="touchUpInside" id="DBi-f6-ZiD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="8qC-xb-9t9" firstAttribute="top" secondItem="jJP-A4-7JW" secondAttribute="bottom" constant="8" id="1Fe-fd-Pgh"/>
                             <constraint firstItem="arf-qx-mIE" firstAttribute="centerY" secondItem="qX9-4D-oYT" secondAttribute="centerY" id="1uc-Ea-Ltq"/>
                             <constraint firstItem="njk-vH-ded" firstAttribute="trailing" secondItem="arf-qx-mIE" secondAttribute="trailing" constant="16" id="4Do-k5-HYw"/>
                             <constraint firstItem="arf-qx-mIE" firstAttribute="leading" secondItem="njk-vH-ded" secondAttribute="leading" constant="16" id="6tO-6c-Jb4"/>
+                            <constraint firstItem="jJP-A4-7JW" firstAttribute="top" secondItem="njk-vH-ded" secondAttribute="top" id="CTr-2r-YCO"/>
+                            <constraint firstItem="8qC-xb-9t9" firstAttribute="centerX" secondItem="qX9-4D-oYT" secondAttribute="centerX" id="W9I-QX-jRO"/>
+                            <constraint firstItem="jJP-A4-7JW" firstAttribute="centerX" secondItem="qX9-4D-oYT" secondAttribute="centerX" id="fgy-Y0-hIa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="njk-vH-ded"/>
                     </view>

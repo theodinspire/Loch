@@ -25,10 +25,17 @@ class LoopViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+//        loopView.animateTimer(over: 10)
+    }
+    
+    @IBAction func reset(_ sender: Any) {
+        loopView.animateTimerReset()
+    }
+    
+    @IBAction func start(_ sender: Any) {
         loopView.animateTimer(over: 10)
     }
     
-
     /*
     // MARK: - Navigation
 
