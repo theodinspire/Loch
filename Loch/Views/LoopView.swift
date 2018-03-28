@@ -20,7 +20,7 @@ class LoopView: UIView {
     var lineWidth: CGFloat = 5
     
     lazy var path: UIBezierPath = initializePath()
-    lazy var animationLayer: CAShapeLayer = initializeAnimationLayer()
+    lazy var animationLayer: CAShapeLayer = initializedAnimationLayer()
     
     override func draw(_ rect: CGRect) {
         layer.addSublayer(animationLayer)
@@ -40,20 +40,14 @@ class LoopView: UIView {
         path.lineWidth = lineWidth
         trackColor.setStroke()
         path.stroke()
-        
-        initializeTimer()
-    }
-    
-    func initializeTimer() {
     }
     
     func animateTimer(over duration: TimeInterval) {
-        animationLayer.setValue(0, forKey: "strokeStart")
-        
         let head = CABasicAnimation(keyPath: "strokeEnd")
         head.fromValue = CGFloat.leastNormalMagnitude
         head.toValue = 1
         head.duration = duration
+        head.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         head.fillMode = kCAFillModeForwards
         head.isRemovedOnCompletion = false
         
@@ -61,14 +55,11 @@ class LoopView: UIView {
     }
     
     func animateTimerReset() {
-        let tail = CABasicAnimation(keyPath: "strokeStart")
-        tail.fromValue = 0
-        tail.toValue = CGFloat.oneMinusEpsilon
-        tail.duration = 0.5
-        tail.fillMode = kCAFillModeForwards
-        tail.isRemovedOnCompletion = false
-
-        animationLayer.add(tail, forKey: "strokeStart")
+        UIView.animate(withDuration: 0, animations: { self.animationLayer.strokeStart = 1 }) { (_) in
+            self.animationLayer = self.initializedAnimationLayer()
+            self.layer.addSublayer(self.animationLayer)
+        }
+        
     }
     
     //  Initializers
@@ -84,7 +75,7 @@ class LoopView: UIView {
         return UIBezierPath(ovalIn: makeLoopRect(for: bounds))
     }
     
-    private func initializeAnimationLayer() -> CAShapeLayer {
+    private func initializedAnimationLayer() -> CAShapeLayer {
         let layer = CAShapeLayer()
         let transform = CGAffineTransform(rotationAngle: 1.5 * CGFloat.pi).translatedBy(x: -bounds.width, y: 0)
         
@@ -101,7 +92,7 @@ class LoopView: UIView {
         layer.shadowOpacity = 1
         layer.shadowOffset = CGSize(width: 0, height: 0)
         
-        layer.setValue(CGFloat.leastNormalMagnitude, forKey: "strokeEnd")
+        layer.strokeEnd = CGFloat.leastNormalMagnitude
         
         return layer
     }

@@ -9,5 +9,5 @@
 import UIKit
 
 extension CGFloat {
-    static let oneMinusEpsilon = 1 - CGFloat.leastNonzeroMagnitude
+    static let oneMinusEpsilon = 1 - CGFloat.ulpOfOne
 }

@@ -33,7 +33,7 @@ class LoopViewController: UIViewController {
     }
     
     @IBAction func start(_ sender: Any) {
-        loopView.animateTimer(over: 10)
+        loopView.animateTimer(over: 2)
     }
     
     /*
