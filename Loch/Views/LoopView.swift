@@ -14,7 +14,7 @@ class LoopView: UIView {
     var trackShade: UIColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.6)
     var trackLight: UIColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.3)
     
-    var timerColor: UIColor = UIColor.white
+    var timerMainColor: CGColor = UIColor.white.cgColor
     
     var loopScale: CGFloat = 0.75
     var lineWidth: CGFloat = 5
@@ -82,12 +82,12 @@ class LoopView: UIView {
         layer.path = path.cgPath
         layer.setAffineTransform(transform)
         
-        layer.strokeColor = timerColor.cgColor
+        layer.strokeColor = timerMainColor
         layer.fillColor = UIColor.clear.cgColor
         layer.lineCap = kCALineCapRound
         layer.lineWidth = lineWidth
         
-        layer.shadowColor = timerColor.cgColor
+        layer.shadowColor = timerMainColor
         layer.shadowRadius = 5.0
         layer.shadowOpacity = 1
         layer.shadowOffset = CGSize(width: 0, height: 0)
