@@ -19,32 +19,36 @@ class LoopView: UIView {
     var loopScale: CGFloat = 0.75
     var lineWidth: CGFloat = 5
     
-    lazy var path: UIBezierPath = initializePath()
     lazy var animationLayer: CAShapeLayer = initializedAnimationLayer()
     
     override func draw(_ rect: CGRect) {
-        layer.addSublayer(animationLayer)
-        
-        let downRect = CGRect(origin: rect.origin + (0.0, 1.0), size: rect.size)
-        let downPath = UIBezierPath(ovalIn: makeLoopRect(for: downRect))
+        let downPath = initializePath(withDisplacement: CGPoint(x: 0, y: 1))
         downPath.lineWidth = lineWidth
         trackLight.setStroke()
         downPath.stroke()
         
-        let upRect = CGRect(origin: rect.origin - (0.0, 1.0), size: rect.size)
-        let upPath = UIBezierPath(ovalIn: makeLoopRect(for: upRect))
+        let upPath = initializePath(withDisplacement: CGPoint(x: 0, y: -1))
         upPath.lineWidth = lineWidth
         trackShade.setStroke()
         upPath.stroke()
         
+        let path = initializePath()
         path.lineWidth = lineWidth
         trackColor.setStroke()
         path.stroke()
+        
+        animationLayer.strokeEnd = .leastNormalMagnitude
+    }
+    
+    override func awakeFromNib() {
+        layer.addSublayer(animationLayer)
+//        animationLayer.strokeEnd = .leastNormalMagnitude
     }
     
     func animateTimer(over duration: TimeInterval) {
+        animationLayer.removeAllAnimations()
+        
         let head = CABasicAnimation(keyPath: "strokeEnd")
-        head.fromValue = CGFloat.leastNormalMagnitude
         head.toValue = 1
         head.duration = duration
         head.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
@@ -55,32 +59,28 @@ class LoopView: UIView {
     }
     
     func animateTimerReset() {
-        UIView.animate(withDuration: 0, animations: { self.animationLayer.strokeStart = 1 }) { (_) in
-            self.animationLayer = self.initializedAnimationLayer()
-            self.layer.addSublayer(self.animationLayer)
-        }
+        let tail = CABasicAnimation(keyPath: "strokeStart")
+        tail.toValue = CGFloat.oneMinusEpsilon
+        tail.duration = 0.1
+        tail.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        tail.fillMode = kCAFillModeForwards
+        tail.isRemovedOnCompletion = false
         
+        animationLayer.add(tail, forKey: "strokeStart")
     }
     
     //  Initializers
-    private func makeLoopRect(for rect: CGRect) -> CGRect {
-        let dimension = min(rect.height, rect.width) * loopScale
-        let size = CGSize(width: dimension, height: dimension)
-        let offset = CGPoint(x: (rect.width - dimension) / 2, y: (rect.height - dimension) / 2)
-        
-        return CGRect(origin: offset + rect.origin, size: size)
+    func initializePath(withDisplacement vector: CGPoint = CGPoint.zero) -> UIBezierPath {
+        let center = CGPoint(x: bounds.width / 2, y: bounds.height / 2) + vector
+        let radius = min(bounds.width, bounds.height) * loopScale / 2
+
+        return UIBezierPath(arcCenter: center, radius: radius, startAngle: -0.5 * .pi, endAngle: 1.5 * .pi, clockwise: true)
     }
     
-    private func initializePath() -> UIBezierPath {
-        return UIBezierPath(ovalIn: makeLoopRect(for: bounds))
-    }
-    
-    private func initializedAnimationLayer() -> CAShapeLayer {
+    func initializedAnimationLayer(endingAt point: CGFloat = .leastNormalMagnitude) -> CAShapeLayer {
         let layer = CAShapeLayer()
-        let transform = CGAffineTransform(rotationAngle: 1.5 * CGFloat.pi).translatedBy(x: -bounds.width, y: 0)
         
-        layer.path = path.cgPath
-        layer.setAffineTransform(transform)
+        layer.path = initializePath().cgPath
         
         layer.strokeColor = timerMainColor
         layer.fillColor = UIColor.clear.cgColor
@@ -92,7 +92,7 @@ class LoopView: UIView {
         layer.shadowOpacity = 1
         layer.shadowOffset = CGSize(width: 0, height: 0)
         
-        layer.strokeEnd = CGFloat.leastNormalMagnitude
+        layer.strokeEnd = point
         
         return layer
     }
