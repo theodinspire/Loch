@@ -17,13 +17,20 @@ extension LoopView {
         layer.addSublayer(fauxLayer)
     }
     
+    //  Track
+    @IBInspectable var loopScalePercent: Double {
+        get { return 100 * Double(loopScale) }
+        set { loopScale = CGFloat(newValue / 100) }
+    }
+    
+    @IBInspectable var width: CGFloat {
+        get { return lineWidth }
+        set { lineWidth = newValue }
+    }
+    
+    //  Timers
     @IBInspectable var workTimerColor: UIColor {
-        get {
-            return UIColor(cgColor: timerMainColor)
-        }
-        
-        set {
-            timerMainColor = newValue.cgColor
-        }
+        get { return UIColor(cgColor: timerMainColor) }
+        set { timerMainColor = newValue.cgColor }
     }
 }
