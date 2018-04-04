@@ -10,7 +10,7 @@ import UIKit
 
 @IBDesignable
 class LoopView: UIView {
-    var trackColor: UIColor = UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 1)
+    var trackGround: UIColor = UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 1)
     var trackShade: UIColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.6)
     var trackLight: UIColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.3)
     
@@ -18,6 +18,8 @@ class LoopView: UIView {
     
     var loopScale: CGFloat = 0.75
     var lineWidth: CGFloat = 5
+    
+    var shadowBlurRadius: CGFloat = 5
     
     lazy var animationLayer: CAShapeLayer = initializedAnimationLayer()
     
@@ -34,7 +36,7 @@ class LoopView: UIView {
         
         let path = initializePath()
         path.lineWidth = lineWidth
-        trackColor.setStroke()
+        trackGround.setStroke()
         path.stroke()
         
         animationLayer.strokeEnd = .leastNormalMagnitude
@@ -61,7 +63,7 @@ class LoopView: UIView {
     func animateTimerReset() {
         let tail = CABasicAnimation(keyPath: "strokeStart")
         tail.toValue = CGFloat.oneMinusEpsilon
-        tail.duration = 0.1
+        tail.duration = 0.33
         tail.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         tail.fillMode = kCAFillModeForwards
         tail.isRemovedOnCompletion = false
@@ -88,7 +90,7 @@ class LoopView: UIView {
         layer.lineWidth = lineWidth
         
         layer.shadowColor = timerMainColor
-        layer.shadowRadius = 5.0
+        layer.shadowRadius = shadowBlurRadius
         layer.shadowOpacity = 1
         layer.shadowOffset = CGSize(width: 0, height: 0)
         

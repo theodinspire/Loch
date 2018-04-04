@@ -28,9 +28,33 @@ extension LoopView {
         set { lineWidth = newValue }
     }
     
+    @IBInspectable var trackColor: UIColor {
+        get { return trackGround }
+        set { trackGround = newValue }
+    }
+    
+    @IBInspectable var trackShadow: UIColor {
+        get { return trackShade }
+        set { trackShade = newValue }
+    }
+    
+    @IBInspectable var trackHighlight: UIColor {
+        get { return trackLight }
+        set { trackLight = newValue }
+    }
+    
     //  Timers
     @IBInspectable var workTimerColor: UIColor {
         get { return UIColor(cgColor: timerMainColor) }
         set { timerMainColor = newValue.cgColor }
+    }
+    
+//    @IBInspectable var breakTimerColor: UIColor {
+//
+//    }
+    
+    @IBInspectable var glowBlurRadius: CGFloat {
+        get { return shadowBlurRadius }
+        set { shadowBlurRadius = newValue }
     }
 }
