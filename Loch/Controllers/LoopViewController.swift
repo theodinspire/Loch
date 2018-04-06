@@ -11,6 +11,8 @@ import UIKit
 class LoopViewController: UIViewController {
     @IBOutlet weak var loopView: LoopView!
     
+    var state = TimerState.Work
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,7 +31,8 @@ class LoopViewController: UIViewController {
     }
     
     @IBAction func reset(_ sender: Any) {
-        loopView.animateTimerReset()
+        state = state == .Work ? .Break : .Work
+        loopView.animateTimerReset(withNextState: state)
     }
     
     @IBAction func start(_ sender: Any) {

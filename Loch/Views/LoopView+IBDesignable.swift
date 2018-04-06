@@ -49,6 +49,11 @@ extension LoopView {
         set { timerMainColor = newValue.cgColor }
     }
     
+    @IBInspectable var breakTimerColor: UIColor {
+        get { return UIColor(cgColor: timerBreakColor)}
+        set { timerBreakColor = newValue.cgColor }
+    }
+    
 //    @IBInspectable var breakTimerColor: UIColor {
 //
 //    }
