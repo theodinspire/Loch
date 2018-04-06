@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lWx-2e-oAN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,53 +19,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's work!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6i-RT-rif">
-                                <rect key="frame" x="95" y="309.5" width="185" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="S6i-RT-rif" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="004-6n-ajI"/>
-                            <constraint firstItem="S6i-RT-rif" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9aM-X3-m4t"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="MZh-HO-9NC" appends="YES" id="ZQE-dn-GhP"/>
-                        </connections>
-                    </view>
-                    <connections>
-                        <outlet property="infoLabel" destination="S6i-RT-rif" id="epm-pX-T8K"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="MZh-HO-9NC">
-                    <connections>
-                        <action selector="userDidTapScreen:" destination="BYZ-38-t0r" id="1vE-sF-mPV"/>
-                    </connections>
-                </tapGestureRecognizer>
-            </objects>
-        </scene>
-        <!--Loop View Controller-->
-        <scene sceneID="waF-is-Ync">
-            <objects>
-                <viewController id="lWx-2e-oAN" customClass="LoopViewController" customModule="Loch" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qX9-4D-oYT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="arf-qx-mIE" customClass="LoopView" customModule="Loch" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t4X-Wf-op8" customClass="LoopView" customModule="Loch" customModuleProvider="target">
                                 <rect key="frame" x="16" y="162" width="343" height="343"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="arf-qx-mIE" secondAttribute="height" multiplier="1:1" id="hru-jg-AjK"/>
+                                    <constraint firstAttribute="width" secondItem="t4X-Wf-op8" secondAttribute="height" multiplier="1:1" id="cO6-aZ-FOe"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="workTimerColor">
-                                        <color key="value" red="0.063588283956050873" green="0.67589551210403442" blue="0.85957413911819458" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.063588283960000005" green="0.67589551209999998" blue="0.85957413910000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="loopScalePercent">
                                         <real key="value" value="90"/>
@@ -74,7 +36,7 @@
                                         <real key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
-                                        <color key="value" red="0.062835521996021271" green="0.21608346700668335" blue="0.21677130460739136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.062835522000000005" green="0.216083467" blue="0.21677130459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="glowBlurRadius">
                                         <real key="value" value="9"/>
@@ -84,44 +46,41 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJP-A4-7JW">
-                                <rect key="frame" x="167.5" y="20" width="39" height="30"/>
-                                <state key="normal" title="Reset">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="reset:" destination="lWx-2e-oAN" eventType="touchUpInside" id="BgP-oU-VWe"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qC-xb-9t9">
-                                <rect key="frame" x="170" y="58" width="34" height="30"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="start:" destination="lWx-2e-oAN" eventType="touchUpInside" id="DBi-f6-ZiD"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's work!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6i-RT-rif">
+                                <rect key="frame" x="95" y="309" width="185" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.072560139000415802" green="0.2597728967666626" blue="0.23164352774620056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.074509803921568626" green="0.25882352941176467" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="8qC-xb-9t9" firstAttribute="top" secondItem="jJP-A4-7JW" secondAttribute="bottom" constant="8" id="1Fe-fd-Pgh"/>
-                            <constraint firstItem="arf-qx-mIE" firstAttribute="centerY" secondItem="qX9-4D-oYT" secondAttribute="centerY" id="1uc-Ea-Ltq"/>
-                            <constraint firstItem="njk-vH-ded" firstAttribute="trailing" secondItem="arf-qx-mIE" secondAttribute="trailing" constant="16" id="4Do-k5-HYw"/>
-                            <constraint firstItem="arf-qx-mIE" firstAttribute="leading" secondItem="njk-vH-ded" secondAttribute="leading" constant="16" id="6tO-6c-Jb4"/>
-                            <constraint firstItem="jJP-A4-7JW" firstAttribute="top" secondItem="njk-vH-ded" secondAttribute="top" id="CTr-2r-YCO"/>
-                            <constraint firstItem="8qC-xb-9t9" firstAttribute="centerX" secondItem="qX9-4D-oYT" secondAttribute="centerX" id="W9I-QX-jRO"/>
-                            <constraint firstItem="jJP-A4-7JW" firstAttribute="centerX" secondItem="qX9-4D-oYT" secondAttribute="centerX" id="fgy-Y0-hIa"/>
+                            <constraint firstItem="S6i-RT-rif" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="004-6n-ajI"/>
+                            <constraint firstItem="S6i-RT-rif" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9aM-X3-m4t"/>
+                            <constraint firstItem="t4X-Wf-op8" firstAttribute="width" secondItem="t4X-Wf-op8" secondAttribute="height" multiplier="1:1" id="ZQH-6H-f3i"/>
+                            <constraint firstItem="t4X-Wf-op8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ake-0V-QBu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t4X-Wf-op8" secondAttribute="trailing" constant="16" id="ndx-hW-cKN"/>
+                            <constraint firstItem="t4X-Wf-op8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tCx-XV-I3S"/>
+                            <constraint firstItem="t4X-Wf-op8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tNo-UN-EuW"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="njk-vH-ded"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="MZh-HO-9NC" appends="YES" id="ZQE-dn-GhP"/>
+                        </connections>
                     </view>
                     <connections>
-                        <outlet property="loopView" destination="arf-qx-mIE" id="5Rg-SN-sdR"/>
+                        <outlet property="infoLabel" destination="S6i-RT-rif" id="epm-pX-T8K"/>
+                        <outlet property="timerLoop" destination="t4X-Wf-op8" id="n0c-iw-hZ1"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RZA-Of-6Nu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="MZh-HO-9NC">
+                    <connections>
+                        <action selector="userDidTapScreen:" destination="BYZ-38-t0r" id="1vE-sF-mPV"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="670" y="848"/>
         </scene>
     </scenes>
 </document>

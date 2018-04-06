@@ -8,11 +8,13 @@
 
 import UIKit
 
-class TimerViewController: UIViewController {
+class TimerViewController: LochViewController {
     @IBOutlet weak var infoLabel: UILabel!
-
+    @IBOutlet weak var timerLoop: LoopView!
+    
     var timerRunning = false
-    var timerState = TimerState.Break
+    var timerAcknowledged = true
+    var timerState = TimerState.Work
 
     var timer = Timer() //  Empty to avoid optional
     var timeLeft = 0.0
@@ -21,8 +23,8 @@ class TimerViewController: UIViewController {
     let minute = 60.0
     let hour = 3600.0
 
-    var breakLength = 5.0
-    var workLength = 10.0
+    var breakLength = 30.0
+    var workLength = 120.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,15 +38,20 @@ class TimerViewController: UIViewController {
 
     @IBAction func userDidTapScreen(_ sender: UITapGestureRecognizer) {
         guard !timerRunning else { return }
+        
+        guard timerAcknowledged else {
+            timerAcknowledged = true
+            timerState = timerState == .Work ? .Break : .Work
+            timerLoop.animateTimerReset(withNextState: timerState)
+            return
+        }
 
         switch timerState {
-        case .Break:
-            timerState = .Work
-            view.backgroundColor = UIColor.red
-            startTimer(at: workLength)
         case .Work:
-            timerState = .Break
-            view.backgroundColor = UIColor.green
+//            view.backgroundColor = UIColor.red
+            startTimer(at: workLength)
+        case .Break:
+//            view.backgroundColor = UIColor.green
             startTimer(at: breakLength)
         default:
             print("Do you even try?")
@@ -54,6 +61,7 @@ class TimerViewController: UIViewController {
     func startTimer(at interval: TimeInterval) {
         timeLeft = interval
         updateClock()
+        timerLoop.animateTimer(over: interval)
         timer = Timer.scheduledTimer(withTimeInterval: second, repeats: true) { _ in
             self.updateClock()
         }
@@ -79,6 +87,7 @@ class TimerViewController: UIViewController {
     }
 
     func endTimer() {
+        timerAcknowledged = false
         timer.invalidate()
         switch timerState {
         case .Break:

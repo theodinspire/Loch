@@ -69,7 +69,7 @@ class LoopView: UIView {
         let head = CABasicAnimation(keyPath: "strokeEnd")
         head.toValue = 1
         head.duration = duration
-        head.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        head.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         head.fillMode = kCAFillModeForwards
         head.isRemovedOnCompletion = false
         
