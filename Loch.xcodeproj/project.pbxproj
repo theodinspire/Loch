@@ -11,6 +11,7 @@
 		A01B886A20675147001E2C5F /* CGFloat+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B886920675147001E2C5F /* CGFloat+Constants.swift */; };
 		A0ACFA642071B36B00724BA0 /* LoopView+IBDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ACFA632071B36B00724BA0 /* LoopView+IBDesignable.swift */; };
 		A0BE577720771316001B19E9 /* LochViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BE577620771316001B19E9 /* LochViewController.swift */; };
+		A0C292D22086EA330043A164 /* TimeInterval+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C292D12086EA330043A164 /* TimeInterval+Constants.swift */; };
 		A0E1D157205F0C2600A95E5D /* CGPoint+VectorArithmatic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E1D156205F0C2600A95E5D /* CGPoint+VectorArithmatic.swift */; };
 		A0E1D15A205F113B00A95E5D /* CGPoint+VectorArithmaticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E1D159205F113B00A95E5D /* CGPoint+VectorArithmaticTests.swift */; };
 		A0F9D7CF205862A500EE5835 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F9D7CE205862A500EE5835 /* AppDelegate.swift */; };
@@ -44,6 +45,7 @@
 		A01B886920675147001E2C5F /* CGFloat+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Constants.swift"; sourceTree = "<group>"; };
 		A0ACFA632071B36B00724BA0 /* LoopView+IBDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoopView+IBDesignable.swift"; sourceTree = "<group>"; };
 		A0BE577620771316001B19E9 /* LochViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LochViewController.swift; sourceTree = "<group>"; };
+		A0C292D12086EA330043A164 /* TimeInterval+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Constants.swift"; sourceTree = "<group>"; };
 		A0E1D156205F0C2600A95E5D /* CGPoint+VectorArithmatic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+VectorArithmatic.swift"; sourceTree = "<group>"; };
 		A0E1D159205F113B00A95E5D /* CGPoint+VectorArithmaticTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+VectorArithmaticTests.swift"; sourceTree = "<group>"; };
 		A0F9D7CB205862A500EE5835 /* Loch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +111,7 @@
 			children = (
 				A0E1D156205F0C2600A95E5D /* CGPoint+VectorArithmatic.swift */,
 				A01B886920675147001E2C5F /* CGFloat+Constants.swift */,
+				A0C292D12086EA330043A164 /* TimeInterval+Constants.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				A0BE577720771316001B19E9 /* LochViewController.swift in Sources */,
 				A0E1D157205F0C2600A95E5D /* CGPoint+VectorArithmatic.swift in Sources */,
 				A0F9D7D1205862A500EE5835 /* TimerViewController.swift in Sources */,
+				A0C292D22086EA330043A164 /* TimeInterval+Constants.swift in Sources */,
 				A0F9D7FE205863FE00EE5835 /* TimerState.swift in Sources */,
 				A01B886A20675147001E2C5F /* CGFloat+Constants.swift in Sources */,
 				A006574F205C91D300EE8457 /* LoopView.swift in Sources */,

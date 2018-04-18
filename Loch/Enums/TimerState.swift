@@ -9,7 +9,7 @@
 import Foundation
 
 enum TimerState {
-    case Work
-    case Break
-    case LongBreak
+    case work
+    case `break`
+    case longBreak
 }

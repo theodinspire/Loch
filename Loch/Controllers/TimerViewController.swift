@@ -14,14 +14,9 @@ class TimerViewController: LochViewController {
     
     var timerRunning = false
     var timerAcknowledged = true
-    var timerState = TimerState.Work
+    var timerState = TimerState.work
 
     var timer = Timer() //  Empty to avoid optional
-    //var timeLeft = 0.0
-
-    let second = 1.0
-    let minute = 60.0
-    let hour = 3600.0
 
     var breakLength = 30.0
     var workLength = 120.0
@@ -43,17 +38,15 @@ class TimerViewController: LochViewController {
         
         guard timerAcknowledged else {
             timerAcknowledged = true
-            timerState = timerState == .Work ? .Break : .Work
+            timerState = timerState == .work ? .break : .work
             timerLoop.animateTimerReset(withNextState: timerState)
             return
         }
 
         switch timerState {
-        case .Work:
-//            view.backgroundColor = UIColor.red
+        case .work:
             startTimer(at: workLength)
-        case .Break:
-//            view.backgroundColor = UIColor.green
+        case .break:
             startTimer(at: breakLength)
         default:
             print("Do you even try?")
@@ -64,7 +57,7 @@ class TimerViewController: LochViewController {
         endTime = Date(timeIntervalSinceNow: interval)
         updateClock()
         timerLoop.animateTimer(over: interval)
-        timer = Timer.scheduledTimer(withTimeInterval: second, repeats: true) { _ in
+        timer = Timer.scheduledTimer(withTimeInterval: .second, repeats: true) { _ in
             self.updateClock()
         }
     }
@@ -77,9 +70,9 @@ class TimerViewController: LochViewController {
             return
         }
 
-        let hours = Int(timeLeft / hour)
-        let minutes = Int((timeLeft.truncatingRemainder(dividingBy: hour)) / minute)
-        let seconds = Int(timeLeft.truncatingRemainder(dividingBy: minute))
+        let hours = Int(timeLeft / .hour)
+        let minutes = Int((timeLeft.truncatingRemainder(dividingBy: .hour)) / .minute)
+        let seconds = Int(timeLeft.truncatingRemainder(dividingBy: .minute))
 
         DispatchQueue.main.async {
             self.infoLabel.text = hours > 0 ?
@@ -92,9 +85,9 @@ class TimerViewController: LochViewController {
         timerAcknowledged = false
         timer.invalidate()
         switch timerState {
-        case .Break:
+        case .break:
             infoLabel.text = "Let's get to work!"
-        case .Work:
+        case .work:
             infoLabel.text = "It's break time!"
         default:
             infoLabel.text = "You've run out of time"
