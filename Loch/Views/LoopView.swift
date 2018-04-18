@@ -10,7 +10,7 @@ import UIKit
 
 @IBDesignable
 class LoopView: UIView {
-    var trackGround = UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 1)
+    var trackGround = UIColor.darkGray
     var trackShade = UIColor(red: 0, green: 0, blue: 0, alpha: 0.6)
     var trackLight = UIColor(red: 1, green: 1, blue: 1, alpha: 0.3)
     
@@ -24,10 +24,10 @@ class LoopView: UIView {
     
     lazy var animationLayer: CAShapeLayer = initializedAnimationLayer()
     
-    var currentState = TimerState.Work
+    var currentState = TimerState.work
     var currentColor: CGColor {
         switch currentState {
-        case .Work:
+        case .work:
             return timerMainColor
         default:
             return timerBreakColor
