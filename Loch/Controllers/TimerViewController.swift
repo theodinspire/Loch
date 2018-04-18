@@ -17,7 +17,7 @@ class TimerViewController: LochViewController {
     var timerState = TimerState.Work
 
     var timer = Timer() //  Empty to avoid optional
-    var timeLeft = 0.0
+    //var timeLeft = 0.0
 
     let second = 1.0
     let minute = 60.0
@@ -25,6 +25,8 @@ class TimerViewController: LochViewController {
 
     var breakLength = 30.0
     var workLength = 120.0
+    
+    var endTime: Date = Date.distantPast
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,7 +61,7 @@ class TimerViewController: LochViewController {
     }
 
     func startTimer(at interval: TimeInterval) {
-        timeLeft = interval
+        endTime = Date(timeIntervalSinceNow: interval)
         updateClock()
         timerLoop.animateTimer(over: interval)
         timer = Timer.scheduledTimer(withTimeInterval: second, repeats: true) { _ in
@@ -68,8 +70,8 @@ class TimerViewController: LochViewController {
     }
 
     func updateClock() {
-        timeLeft -= 1
-
+        let timeLeft = endTime.timeIntervalSinceNow
+        
         guard timeLeft >= 0 else {
             DispatchQueue.main.async { self.endTimer() }
             return
