@@ -105,3 +105,6 @@ fastlane/test_output
 
 
 # End of https://www.gitignore.io/api/xcode,swift,macos
+
+# Project specific items
+Working Assets/
