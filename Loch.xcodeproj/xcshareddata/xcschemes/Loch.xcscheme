@@ -28,26 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A0F9D7DE205862A500EE5835"
-               BuildableName = "LochTests.xctest"
-               BlueprintName = "LochTests"
-               ReferencedContainer = "container:Loch.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A0F9D7E9205862A500EE5835"
-               BuildableName = "LochUITests.xctest"
-               BlueprintName = "LochUITests"
-               ReferencedContainer = "container:Loch.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
