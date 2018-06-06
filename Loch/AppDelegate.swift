@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { authorized, error in
             if let error = error { print(error) }
+            State.current.isAuthorizedForNotifications = authorized
             if !authorized {
                 let alert = UIAlertController(title: "Loch Notifications", message: "By turning off notifications, you will not be told when to end work if the app is closed", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Okay", style: .default))

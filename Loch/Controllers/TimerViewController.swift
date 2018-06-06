@@ -7,19 +7,19 @@
 //
 
 import UIKit
+import UserNotifications
 
 class TimerViewController: LochViewController {
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var timerLoop: LoopView!
     
     var timerRunning = false
-    var timerAcknowledged = true
-    var timerState = TimerState.work
+    var timerState = TimerState.break
 
     var timer = Timer() //  Empty to avoid optional
 
-    var breakLength = 30.0
-    var workLength = 120.0
+    var breakLength: TimeInterval = .minute * 0.5
+    var workLength: TimeInterval = .minute * 1
     
     var endTime: Date = Date.distantPast
 
@@ -35,13 +35,9 @@ class TimerViewController: LochViewController {
 
     @IBAction func userDidTapScreen(_ sender: UITapGestureRecognizer) {
         guard !timerRunning else { return }
-        
-        guard timerAcknowledged else {
-            timerAcknowledged = true
-            timerState = timerState == .work ? .break : .work
-            timerLoop.animateTimerReset(withNextState: timerState)
-            return
-        }
+
+        timerState = timerState == .work ? .break : .work
+        timerLoop.animateTimerReset(withNextState: timerState)
 
         switch timerState {
         case .work:
@@ -56,6 +52,7 @@ class TimerViewController: LochViewController {
     func startTimer(at interval: TimeInterval) {
         endTime = Date(timeIntervalSinceNow: interval)
         updateClock()
+        setNotification(in: interval)
         timerLoop.animateTimer(over: interval)
         timer = Timer.scheduledTimer(withTimeInterval: .second, repeats: true) { _ in
             self.updateClock()
@@ -81,8 +78,26 @@ class TimerViewController: LochViewController {
         }
     }
 
+    func setNotification(in interval: TimeInterval) {
+        guard State.current.isAuthorizedForNotifications else { return }
+
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: interval, repeats: false)
+        let content = UNMutableNotificationContent()
+        content.body = timerState == .work ?
+            "Great job! Let's take a break." :
+        "That was a good break. Let's do some work!"
+        content.title = "Loch"
+
+        let request = UNNotificationRequest(identifier: "loch", content: content, trigger: trigger)
+
+        UNUserNotificationCenter.current().add(request) { error in
+            if let error = error {
+                print("Error adding notification: \(error.localizedDescription)")
+            }
+        }
+    }
+
     func endTimer() {
-        timerAcknowledged = false
         timer.invalidate()
         switch timerState {
         case .break:
