@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { authorized, error in
+            if let error = error { print(error) }
+            State.current.isAuthorizedForNotifications = authorized
+            if !authorized {
+                let alert = UIAlertController(title: "Loch Notifications", message: "By turning off notifications, you will not be told when to end work if the app is closed", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Okay", style: .default))
+                
+                self.window?.rootViewController?.present(alert, animated: true)
+            }
+        }
+        
         return true
     }
 

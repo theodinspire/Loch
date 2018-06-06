@@ -59,7 +59,8 @@ class LoopView: UIView {
         
         super.awakeFromNib()
     }
-    
+
+    //  TODO: Combine Reset with animation start
     func animateTimer(over duration: TimeInterval) {
         animationLayer.strokeColor = currentColor
         animationLayer.shadowColor = currentColor

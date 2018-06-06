@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A006574F205C91D300EE8457 /* LoopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A006574E205C91D300EE8457 /* LoopView.swift */; };
 		A01B886A20675147001E2C5F /* CGFloat+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B886920675147001E2C5F /* CGFloat+Constants.swift */; };
+		A03C6D5920C7779F0054BECB /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03C6D5820C7779F0054BECB /* State.swift */; };
 		A0ACFA642071B36B00724BA0 /* LoopView+IBDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ACFA632071B36B00724BA0 /* LoopView+IBDesignable.swift */; };
 		A0BE577720771316001B19E9 /* LochViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BE577620771316001B19E9 /* LochViewController.swift */; };
 		A0C292D22086EA330043A164 /* TimeInterval+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C292D12086EA330043A164 /* TimeInterval+Constants.swift */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		A006574E205C91D300EE8457 /* LoopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopView.swift; sourceTree = "<group>"; };
 		A01B886920675147001E2C5F /* CGFloat+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Constants.swift"; sourceTree = "<group>"; };
+		A03C6D5820C7779F0054BECB /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		A0ACFA632071B36B00724BA0 /* LoopView+IBDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoopView+IBDesignable.swift"; sourceTree = "<group>"; };
 		A0BE577620771316001B19E9 /* LochViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LochViewController.swift; sourceTree = "<group>"; };
 		A0C292D12086EA330043A164 /* TimeInterval+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Constants.swift"; sourceTree = "<group>"; };
@@ -106,6 +108,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		A03C6D5720C7772A0054BECB /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A03C6D5820C7779F0054BECB /* State.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		A0E1D155205F0B4600A95E5D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +157,7 @@
 		A0F9D7CD205862A500EE5835 /* Loch */ = {
 			isa = PBXGroup;
 			children = (
+				A03C6D5720C7772A0054BECB /* Utilities */,
 				A0E1D155205F0B4600A95E5D /* Extensions */,
 				A006574D205C91BB00EE8457 /* Views */,
 				A006574A205C90BC00EE8457 /* Controllers */,
@@ -323,6 +334,7 @@
 				A0BE577720771316001B19E9 /* LochViewController.swift in Sources */,
 				A0E1D157205F0C2600A95E5D /* CGPoint+VectorArithmatic.swift in Sources */,
 				A0F9D7D1205862A500EE5835 /* TimerViewController.swift in Sources */,
+				A03C6D5920C7779F0054BECB /* State.swift in Sources */,
 				A0C292D22086EA330043A164 /* TimeInterval+Constants.swift in Sources */,
 				A0F9D7FE205863FE00EE5835 /* TimerState.swift in Sources */,
 				A01B886A20675147001E2C5F /* CGFloat+Constants.swift in Sources */,
