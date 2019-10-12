@@ -18,8 +18,8 @@ class TimerViewController: LochViewController {
 
     var timer = Timer() //  Empty to avoid optional
 
-    var breakLength: TimeInterval = .minute * 0.5
-    var workLength: TimeInterval = .minute * 1
+    var breakLength: TimeInterval = .minute * 5
+    var workLength: TimeInterval = .minute * 25
     
     var endTime: Date = Date.distantPast
 
